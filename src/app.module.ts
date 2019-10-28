@@ -1,0 +1,34 @@
+import { Module } from '@nestjs/common';
+import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Survey } from './entities/survey';
+import { SurveyModule } from './survey/survey.module';
+import { GraphQLModule } from '@nestjs/graphql';
+
+@Module({
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mongodb',
+      url: process.env.DATABASE_URL,
+      useUnifiedTopology: true,
+      entities: [
+        Survey,
+      ],
+      synchronize: false,
+    }),
+    GraphQLModule.forRoot({
+      debug: process.env.NODE_ENV === 'development',
+      playground: process.env.NODE_ENV === 'development',
+      include: [
+        SurveyModule,
+      ],
+    }),
+    SurveyModule,
+  ],
+  controllers: [
+  ],
+  providers: [
+    AppService,
+  ],
+})
+export class AppModule {}
