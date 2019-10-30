@@ -10,11 +10,12 @@ import { GraphQLModule } from '@nestjs/graphql';
     TypeOrmModule.forRoot({
       type: 'mongodb',
       url: process.env.DATABASE_URL,
-      useUnifiedTopology: true,
       entities: [
         Survey,
       ],
       synchronize: false,
+      logging: true,
+      useUnifiedTopology: true,
     }),
     GraphQLModule.forRoot({
       debug: process.env.NODE_ENV === 'development',

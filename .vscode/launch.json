@@ -14,6 +14,45 @@
                 "${workspaceFolder}/dist/**/*.js"
             ],
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Nest Framework",
+            "args": ["${workspaceFolder}/src/main.ts"],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "nodemon",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/dist/main.js",
+            "restart": false,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "preLaunchTask": "build",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "DEBUG": "express:*"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "nodemon2",
+            "runtimeExecutable": "nodemon",
+            "restart": false,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "DEBUG": "express:*"
+            }
         }
     ]
 }
