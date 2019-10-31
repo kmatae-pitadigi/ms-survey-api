@@ -7,52 +7,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/dist/main.js",
-            "preLaunchTask": "build",
-            "outFiles": [
-                "${workspaceFolder}/dist/**/*.js"
-            ],
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug Nest Framework",
-            "args": ["${workspaceFolder}/src/main.ts"],
-            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
-            "sourceMaps": true,
-            "cwd": "${workspaceRoot}",
-            "protocol": "inspector",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "nodemon",
+            "name": "nodemon-mac",
             "runtimeExecutable": "nodemon",
             "program": "${workspaceFolder}/dist/main.js",
             "restart": false,
+            "timeout": 20000,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "preLaunchTask": "build",
             "envFile": "${workspaceFolder}/.env",
-            "env": {
-                "DEBUG": "express:*"
-            }
         },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "nodemon2",
-            "runtimeExecutable": "nodemon",
-            "restart": false,
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "envFile": "${workspaceFolder}/.env",
-            "env": {
-                "DEBUG": "express:*"
-            }
-        }
     ]
 }

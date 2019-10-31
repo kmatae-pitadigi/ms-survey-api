@@ -1,29 +1,38 @@
-import { Resolver, Mutation, Args } from '@nestjs/graphql';
+import { Resolver, Mutation, Query, Args } from '@nestjs/graphql';
 import { SurveyService } from './survey.service';
-import { ISurvey } from '../interfaces/isurvey.interface';
-import { IResult } from '../interfaces/iresult.interface';
-import { InsertResult } from 'typeorm';
+import { SurveyInput } from '../dto/survey-input';
+import { Survey } from '../entities/survey';
+import { SurveyResult } from '../dto/survey-result';
 
-@Resolver('Survey')
+@Resolver(of => Survey)
 export class SurveyResolver {
     constructor(
         private readonly surveyService: SurveyService,
     ) {}
 
-    @Mutation('saveSurvey')
-    async save(@Args('survey') survey: ISurvey): Promise<IResult> {
-        const ret: IResult = {result: undefined, message: undefined, body: undefined};
+    @Query(returns => Survey)
+    async findOne(@Args('id') id: string): Promise<Survey> {
+        // ID指定でサーベイ情報を取得する
+        return await this.surveyService.findOne(id);
+    }
+
+    @Mutation(returns => SurveyResult)
+    async save(@Args('survey') surveyInput: SurveyInput): Promise<SurveyResult> {
+        const ret: SurveyResult = {result: undefined, message: undefined, survey: undefined};
 
         try {
+            // サーベイのデータを設定する
+            const survey: Survey = new Survey(surveyInput);
+
             // サーベイを保存する
-            const saveSurvey: ISurvey = await this.surveyService.save(survey);
+            const saveSurvey: Survey = await this.surveyService.save(survey);
             ret.result = 'OK';
             ret.message = undefined;
-            ret.body = saveSurvey;
+            ret.survey = saveSurvey;
         } catch (error) {
-            ret.result = 'Error';
+            ret.result = 'ERROR';
             ret.message = error.message;
-            ret.body = undefined;
+            ret.survey = undefined;
         }
 
         return ret;

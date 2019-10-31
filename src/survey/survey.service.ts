@@ -11,6 +11,15 @@ export class SurveyService {
     ) {}
 
     /**
+     * ID指定でサーベイ情報を取得する
+     * @param id サーベイID
+     */
+    async findOne(id: string): Promise<Survey> {
+        // ID指定でサーベイ情報を取得する
+        return await this.surveyRepository.findOne(id);
+    }
+
+    /**
      * サーベイを保存する
      */
     async save(survey: Survey): Promise<Survey> {

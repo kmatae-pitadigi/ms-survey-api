@@ -1,5 +1,12 @@
 export interface IResult {
+    /**
+     * 結果
+     * OK : 成功
+     * ERROR : エラー
+     */
     result: string;
-    message: string;
-    body: any;
+    /**
+     * エラー時のメッセージ
+     */
+    message?: string;
 }

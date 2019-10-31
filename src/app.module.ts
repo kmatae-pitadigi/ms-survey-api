@@ -7,6 +7,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 
 @Module({
   imports: [
+    SurveyModule,
     TypeOrmModule.forRoot({
       type: 'mongodb',
       url: process.env.DATABASE_URL,
@@ -20,11 +21,8 @@ import { GraphQLModule } from '@nestjs/graphql';
     GraphQLModule.forRoot({
       debug: process.env.NODE_ENV === 'development',
       playground: process.env.NODE_ENV === 'development',
-      include: [
-        SurveyModule,
-      ],
+      autoSchemaFile: 'schema.gql',
     }),
-    SurveyModule,
   ],
   controllers: [
   ],

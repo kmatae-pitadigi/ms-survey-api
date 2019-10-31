@@ -9,11 +9,5 @@
             "script": "build",
             "problemMatcher": []
         },
-        {
-            "type": "npm",
-            "label": "start:debug",
-            "script": "start:debug",
-            "problemMatcher": []
-        }
     ]
 }
