@@ -18,7 +18,10 @@ export class SurveyResolver {
 
     @Mutation(returns => SurveyResult)
     async save(@Args('survey') surveyInput: SurveyInput): Promise<SurveyResult> {
-        const ret: SurveyResult = {result: undefined, message: undefined, survey: undefined};
+        const ret: SurveyResult = new SurveyResult();
+        ret.result = undefined;
+        ret.message = undefined;
+        ret.survey = undefined;
 
         try {
             // サーベイのデータを設定する

@@ -12,7 +12,7 @@ describe('SurveyService', () => {
       imports: [
         TypeOrmModule.forRoot({
           type: 'mongodb',
-          url: process.env.DATABASE_URL,
+          url: process.env.DATABASE_URL_TEST,
           entities: [
             Survey,
           ],
