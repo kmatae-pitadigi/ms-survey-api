@@ -1,0 +1,67 @@
+[
+    {
+        "question": "motivation",
+        "answer": "yes",
+        "commentFile": "motivation-yes.txt"
+    },
+    {
+        "question": "motivation",
+        "answer": "no",
+        "commentFile": "motivation-no.txt"
+    },
+    {
+        "question": "cleanDesk",
+        "answer": "yes",
+        "commentFile": "cleanDesk-yes.txt"
+    },
+    {
+        "question": "cleanDesk",
+        "answer": "no",
+        "commentFile": "cleanDesk-no.txt"
+    },
+    {
+        "question": "manual",
+        "answer": "yes",
+        "commentFile": "manual-yes.txt"
+    },
+    {
+        "question": "manual",
+        "answer": "no",
+        "commentFile": "manual-no.txt"
+    },
+    {
+        "question": "timeManagement",
+        "answer": "yes",
+        "commentFile": "timeManagement-yes.txt"
+    },
+    {
+        "question": "timeManagement",
+        "answer": "no",
+        "commentFile": "timeManagement-no.txt"
+    },
+    {
+        "question": "telework",
+        "answer": "yes",
+        "commentFile": "telework-yes.txt"
+    },
+    {
+        "question": "telework",
+        "answer": "no",
+        "commentFile": "telework-no.txt"
+    },
+    {
+        "question": "communication",
+        "answer": "phone",
+        "commentFile": "communication-phone.txt"
+    },
+    {
+        "question": "communication",
+        "answer": "mail",
+        "commentFile": "communication-mail.txt"
+    },
+    {
+        "question": "communication",
+        "answer": "chat",
+        "commentFile": "communication-chat.txt"
+    },
+]
