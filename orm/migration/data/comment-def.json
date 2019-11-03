@@ -64,4 +64,34 @@
         "answer": "chat",
         "commentFile": "communication-chat.txt"
     },
+    {
+        "question": "informationSharing",
+        "answer": "paper",
+        "commentFile": "informationSharing-paper.txt"
+    },
+    {
+        "question": "informationSharing",
+        "answer": "fileserver",
+        "commentFile": "informationSharing-fileserver.txt"
+    },
+    {
+        "question": "informationSharing",
+        "answer": "mail",
+        "commentFile": "informationSharing-mail.txt"
+    },
+    {
+        "question": "informationSharing",
+        "answer": "portal",
+        "commentFile": "informationSharing-portal.txt"
+    },
+    {
+        "question": "informationSharing",
+        "answer": "chat",
+        "commentFile": "informationSharing-chat.txt"
+    },
+    {
+        "question": "informationSharing",
+        "answer": "storage",
+        "commentFile": "informationSharing-storage.txt"
+    },
 ]
