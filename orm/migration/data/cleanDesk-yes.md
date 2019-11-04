@@ -1,4 +1,4 @@
-# <span style="color: green;">素晴らしいです！！</span>
+##### <span style="color: green;">素晴らしいです！！</span>
 
 時間をかけて探した場合は、その都度、原因を突き止め、改善するようにしましょう。
 

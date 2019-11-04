@@ -1,4 +1,4 @@
-# <span style="color: green;">素晴らしいです！！</span>
+##### <span style="color: green;">素晴らしいです！！</span>
 
 生産性の高いコミュニケーションが実現できています。
 

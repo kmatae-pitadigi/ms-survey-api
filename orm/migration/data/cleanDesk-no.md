@@ -1,4 +1,4 @@
-# <span style="color: red;">こんな経験はありませんか？</span>
+##### <span style="color: red;">こんな経験はありませんか？</span>
 
 * 事務所内がとにかく散らかっている。
 * まだ会社にいるのか、帰ったのか分からない。
@@ -7,7 +7,7 @@
 * パソコンのデスクトップがアイコンでびっしりになっている。
 * Windows、MacOSの検索機能を活用している。
 
-# <span style="color: blue;">解決しましょう！！</span>
+##### <span style="color: blue;">解決しましょう！！</span>
 
 整理整頓は、生産性向上の第一歩です。 
 

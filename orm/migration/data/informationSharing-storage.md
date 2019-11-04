@@ -1,4 +1,4 @@
-# <span style="color: green;">素晴らしいです！！</style>
+##### <span style="color: green;">素晴らしいです！！</style>
 
 ストレージサービスのメリットを十分に活かせているかをチェックしてみてください。
 

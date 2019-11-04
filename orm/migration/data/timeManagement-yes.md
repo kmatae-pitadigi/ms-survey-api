@@ -1,4 +1,4 @@
-# <span style="color: green;">素晴らしいです！！</span>
+##### <span style="color: green;">素晴らしいです！！</span>
 
 「見える化」は生産性向上に必要不可欠です。
 
