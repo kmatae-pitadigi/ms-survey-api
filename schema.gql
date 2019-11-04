@@ -3,6 +3,13 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type Comment {
+  id: ID!
+  question: String!
+  answer: String!
+  comment: String!
+}
+
 type Mutation {
   save(survey: SurveyInput!): SurveyResult!
 }
@@ -14,28 +21,58 @@ type Query {
 type Survey {
   id: ID!
   motivation: String!
+  motivationKey: String!
+  motivationComment: String!
   cleanDesk: String!
+  cleanDeskKey: String!
+  cleanDeskComment: String!
   manual: String!
+  manualKey: String!
+  manualComment: String!
   timeManagement: String!
+  timeManagementKey: String!
+  timeManagementComment: String!
   telework: String!
+  teleworkKey: String!
+  teleworkComment: String!
   communication: String!
+  communicationKey: String!
+  communicationComment: String!
   informationSharing: String!
+  informationSharingKey: String!
+  informationSharingComment: String!
   workflow: String!
+  workflowKey: String!
+  workflowComment: String!
   customerManagement: String!
+  customerManagementKey: String!
+  customerManagementComment: String!
   profitManagement: String!
+  profitManagementKey: String!
+  profitManagementComment: String!
 }
 
 input SurveyInput {
   motivation: String!
+  motivationKey: String!
   cleanDesk: String!
+  cleanDeskKey: String!
   manual: String!
+  manualKey: String!
   timeManagement: String!
+  timeManagementKey: String!
   telework: String!
+  teleworkKey: String!
   communication: String!
+  communicationKey: String!
   informationSharing: String!
+  informationSharingKey: String!
   workflow: String!
+  workflowKey: String!
   customerManagement: String!
+  customerManagementKey: String!
   profitManagement: String!
+  profitManagementKey: String!
 }
 
 type SurveyResult {

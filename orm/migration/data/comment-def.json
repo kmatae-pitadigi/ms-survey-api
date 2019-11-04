@@ -2,96 +2,131 @@
     {
         "question": "motivation",
         "answer": "yes",
-        "commentFile": "motivation-yes.txt"
+        "commentFile": "motivation-yes.md"
     },
     {
         "question": "motivation",
         "answer": "no",
-        "commentFile": "motivation-no.txt"
+        "commentFile": "motivation-no.md"
     },
     {
         "question": "cleanDesk",
         "answer": "yes",
-        "commentFile": "cleanDesk-yes.txt"
+        "commentFile": "cleanDesk-yes.md"
     },
     {
         "question": "cleanDesk",
         "answer": "no",
-        "commentFile": "cleanDesk-no.txt"
+        "commentFile": "cleanDesk-no.md"
     },
     {
         "question": "manual",
         "answer": "yes",
-        "commentFile": "manual-yes.txt"
+        "commentFile": "manual-yes.md"
     },
     {
         "question": "manual",
         "answer": "no",
-        "commentFile": "manual-no.txt"
+        "commentFile": "manual-no.md"
     },
     {
         "question": "timeManagement",
         "answer": "yes",
-        "commentFile": "timeManagement-yes.txt"
+        "commentFile": "timeManagement-yes.md"
     },
     {
         "question": "timeManagement",
         "answer": "no",
-        "commentFile": "timeManagement-no.txt"
+        "commentFile": "timeManagement-no.md"
     },
     {
         "question": "telework",
         "answer": "yes",
-        "commentFile": "telework-yes.txt"
+        "commentFile": "telework-yes.md"
     },
     {
         "question": "telework",
         "answer": "no",
-        "commentFile": "telework-no.txt"
+        "commentFile": "telework-no.md"
     },
     {
         "question": "communication",
         "answer": "phone",
-        "commentFile": "communication-phone.txt"
+        "commentFile": "communication-phone.md"
     },
     {
         "question": "communication",
         "answer": "mail",
-        "commentFile": "communication-mail.txt"
+        "commentFile": "communication-mail.md"
     },
     {
         "question": "communication",
         "answer": "chat",
-        "commentFile": "communication-chat.txt"
+        "commentFile": "communication-chat.md"
     },
     {
         "question": "informationSharing",
         "answer": "paper",
-        "commentFile": "informationSharing-paper.txt"
+        "commentFile": "informationSharing-paper.md"
     },
     {
         "question": "informationSharing",
         "answer": "fileserver",
-        "commentFile": "informationSharing-fileserver.txt"
+        "commentFile": "informationSharing-fileserver.md"
     },
     {
         "question": "informationSharing",
         "answer": "mail",
-        "commentFile": "informationSharing-mail.txt"
+        "commentFile": "informationSharing-mail.md"
     },
     {
         "question": "informationSharing",
         "answer": "portal",
-        "commentFile": "informationSharing-portal.txt"
+        "commentFile": "informationSharing-portal.md"
     },
     {
         "question": "informationSharing",
         "answer": "chat",
-        "commentFile": "informationSharing-chat.txt"
+        "commentFile": "informationSharing-chat.md"
     },
     {
         "question": "informationSharing",
         "answer": "storage",
-        "commentFile": "informationSharing-storage.txt"
+        "commentFile": "informationSharing-storage.md"
     },
+    {
+        "question": "workflow",
+        "answer": "paper",
+        "commentFile": "workflow-paper.md"
+    },
+    {
+        "question": "workflow",
+        "answer": "excel",
+        "commentFile": "workflow-excel.md"
+    },
+    {
+        "question": "workflow",
+        "answer": "workflow",
+        "commentFile": "workflow-workflow.md"
+    },
+    {
+        "question": "customerManagement",
+        "answer": "yes",
+        "commentFile": "customerManagement-yes.md"
+    },
+    {
+        "question": "customerManagement",
+        "answer": "no",
+        "commentFile": "customerManagement-no.md"
+    },
+    {
+        "question": "profitManagement",
+        "answer": "yes",
+        "commentFile": "profitManagement-yes.md"
+    },
+    {
+        "question": "profitManagement",
+        "answer": "no",
+        "commentFile": "profitManagement-no.md"
+    }
 ]

@@ -13,5 +13,14 @@
             },
             "problemMatcher": []
         },
+        {
+            "type": "shell",
+            "label": "kill-nodemon",
+            "command": "kill",
+            "args": [
+                "-9",
+                "$(lsof -i:3000)"
+            ]
+        }
     ]
 }
