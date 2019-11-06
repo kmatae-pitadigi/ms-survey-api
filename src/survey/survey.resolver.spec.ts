@@ -5,6 +5,8 @@ import { SurveyService } from './survey.service';
 import { Survey } from '../entities/survey';
 import { SurveyInput } from '../dto/survey-input';
 import { SurveyResult } from '../dto/survey-result';
+import { Comment } from '../entities/comment';
+import { CommentModule } from '../comment/comment.module';
 
 describe('SurveyResolver', () => {
   let service: SurveyService;
@@ -18,6 +20,7 @@ describe('SurveyResolver', () => {
           url: process.env.DATABASE_URL_TEST,
           entities: [
             Survey,
+            Comment,
           ],
           synchronize: false,
           useUnifiedTopology: true,
@@ -25,6 +28,7 @@ describe('SurveyResolver', () => {
         TypeOrmModule.forFeature([
           Survey,
         ]),
+        CommentModule,
       ],
       providers: [
         SurveyResolver,
