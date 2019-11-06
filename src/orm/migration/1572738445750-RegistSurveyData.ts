@@ -1,5 +1,5 @@
 import { MigrationInterface, QueryRunner, getConnection, getMongoRepository } from 'typeorm';
-import { Comment } from '../../src/entities/comment';
+import { Comment } from '../../entities/comment';
 import * as fs from 'fs';
 import * as path from 'path';
 

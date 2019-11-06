@@ -10,9 +10,9 @@ module.exports = {
        "src/entities/**/!(*.spec.ts)"
     ],
     "migrations": [
-       "orm/migration/**/*.ts"
+       "src/orm/migration/**/*.ts"
     ],
     "cli": {
-        "migrationsDir": "orm/migration"
+        "migrationsDir": "src/orm/migration"
     },
 }

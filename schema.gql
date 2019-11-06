@@ -3,13 +3,6 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-type Comment {
-  id: ID!
-  question: String!
-  answer: String!
-  comment: String!
-}
-
 type Mutation {
   save(survey: SurveyInput!): SurveyResult!
 }
@@ -21,58 +14,48 @@ type Query {
 type Survey {
   id: ID!
   motivation: String!
-  motivationKey: String!
   motivationComment: String!
+  motivationRate: Float!
   cleanDesk: String!
-  cleanDeskKey: String!
   cleanDeskComment: String!
+  cleanDeskRate: Float!
   manual: String!
-  manualKey: String!
   manualComment: String!
+  manualRate: Float!
   timeManagement: String!
-  timeManagementKey: String!
   timeManagementComment: String!
+  timeManagementRate: Float!
   telework: String!
-  teleworkKey: String!
   teleworkComment: String!
+  teleworkRate: Float!
   communication: String!
-  communicationKey: String!
   communicationComment: String!
+  communicationRate: Float!
   informationSharing: String!
-  informationSharingKey: String!
   informationSharingComment: String!
+  informationSharingRate: Float!
   workflow: String!
-  workflowKey: String!
   workflowComment: String!
+  workflowRate: Float!
   customerManagement: String!
-  customerManagementKey: String!
   customerManagementComment: String!
+  customerManagementRate: Float!
   profitManagement: String!
-  profitManagementKey: String!
   profitManagementComment: String!
+  profitManagementRate: Float!
 }
 
 input SurveyInput {
   motivation: String!
-  motivationKey: String!
   cleanDesk: String!
-  cleanDeskKey: String!
   manual: String!
-  manualKey: String!
   timeManagement: String!
-  timeManagementKey: String!
   telework: String!
-  teleworkKey: String!
   communication: String!
-  communicationKey: String!
   informationSharing: String!
-  informationSharingKey: String!
   workflow: String!
-  workflowKey: String!
   customerManagement: String!
-  customerManagementKey: String!
   profitManagement: String!
-  profitManagementKey: String!
 }
 
 type SurveyResult {

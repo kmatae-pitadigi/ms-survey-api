@@ -1,7 +1,20 @@
 import { ObjectID } from 'typeorm';
-import { ICommentInput } from './icomment-input.interface';
 
-export interface IComment extends ICommentInput {
+export interface IComment {
     id: ObjectID;
+
+    /**
+     * 質問
+     */
+    question: string;
+
+    /**
+     * 回答
+     */
+    answer: string;
+
+    /**
+     * コメント
+     */
     comment: string;
 }

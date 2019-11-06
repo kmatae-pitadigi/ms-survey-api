@@ -17,10 +17,13 @@ import { Comment } from './entities/comment';
         Survey,
         Comment,
       ],
-      synchronize: false,
-      logging: true,
+      synchronize: true,
+      logging: false,
       useUnifiedTopology: true,
-    }),
+      migrations: [
+        'dist/orm/migration/**/*.js',
+     ],
+     }),
     GraphQLModule.forRoot({
       debug: process.env.NODE_ENV === 'development',
       playground: process.env.NODE_ENV === 'development',
