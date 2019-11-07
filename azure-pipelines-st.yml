@@ -17,7 +17,8 @@ steps:
 
 - script: |
     npm install
-    npm run build
+    npm run prebuild
+    npm run build:prod
   displayName: 'npm install and build'
 
 - task: ArchiveFiles@2
