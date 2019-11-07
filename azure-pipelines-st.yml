@@ -23,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '/'
+    SourceFolder: './'
     Contents: 'process.json'
     TargetFolder: 'dist'
 
