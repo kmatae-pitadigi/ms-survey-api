@@ -26,6 +26,7 @@ steps:
     SourceFolder: './'
     Contents: 'process.json'
     TargetFolder: 'dist'
+  displayName: 'Copy process.json to dist folder'
 
 - task: ArchiveFiles@2
   inputs:
@@ -34,9 +35,11 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/ms-survey-api-st.zip'
     replaceExistingArchive: true
+  displayName: 'Archive dist files'
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+  displayName: 'Publish'
