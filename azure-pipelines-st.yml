@@ -13,7 +13,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: minnasmile
+- group: pitadigi
+- group: ms-survey-api-st
 - name: dockerId
   value: pitadigi
 - name: imageName
