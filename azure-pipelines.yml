@@ -1,10 +1,10 @@
-# Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+# Docker image
+# Build a Docker image to deploy, run, or push to a container registry.
+# Add steps that use Docker Compose, tag images, push to a registry, run an image, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+- develop
 
 # no PR builds
 pr: none
@@ -12,37 +12,19 @@ pr: none
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+- group: pitadigi
+- group: ms-survey-api
+- name: dockerId
+  value: pitadigi
+- name: imageName
+  value: ms-survey-api:latest
+- name: dockerUrl
+  value: $(dockerId).azurecr.io
+
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
 - script: |
-    npm install
-    npm run prebuild
-    npm run build:prod
-  displayName: 'npm install and build'
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: './'
-    Contents: 'package.json'
-    TargetFolder: 'dist'
-  displayName: 'Copy package.json to dist folder'
-
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: 'dist'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/ms-survey-api.zip'
-    replaceExistingArchive: true
-  displayName: 'Archive dist files'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
-  displayName: 'Publish'
+    docker build  -f Dockerfile -t $(dockerUrl)/$(imageName) .
+    docker login -u $(dockerId) -p $(dockerPassword) $(dockerUrl)
+    docker push $(dockerUrl)/$(imageName)
+  displayName: Build Docker image

@@ -18,7 +18,7 @@ variables:
 - name: dockerId
   value: pitadigi
 - name: imageName
-  value: ms-survey-api-st:$(build.buildid)
+  value: ms-survey-api-st:latest
 - name: dockerUrl
   value: $(dockerId).azurecr.io
 
