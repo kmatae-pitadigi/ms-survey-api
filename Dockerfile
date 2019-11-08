@@ -10,7 +10,7 @@ FROM node:10.16.3-alpine
 COPY package.json package-lock.json ./
 
 # 必要なパッケージをインストールする
-RUN npm --unsafe-perm ci
+RUN npm ci
 
 # PM2をインストールする
 RUN npm install pm2 -g
@@ -19,9 +19,9 @@ RUN npm install pm2 -g
 COPY . .
 
 # 環境変数を設定する
-ENV NODE_ENV=production
-ENV DATABASE_URL=${DATABASE_URL}
-ENV DATABASE_URL_TEST=${DATABASE_URL_TEST}
+ENV NODE_ENV=production \
+    DATABASE_URL=${DATABASE_URL} \
+    DATABASE_URL_TEST=${DATABASE_URL_TEST}
 
 # ビルドする
 RUN npm run build:prod
