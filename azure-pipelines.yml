@@ -25,7 +25,6 @@ variables:
 steps:
 - script: |
     docker build  -f Dockerfile -t $(dockerUrl)/$(imageName) .
-    az login --service-principal -u $(name) -p $(password) --tenant $(tenant)
-    az acr login --name $(dockerId)
+    docker login -u $(dockerId) -p $(dockerPassword) $(dockerUrl)
     docker push $(dockerUrl)/$(imageName)
   displayName: Build Docker image
