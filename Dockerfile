@@ -26,5 +26,8 @@ ENV NODE_ENV=production \
 # ビルドする
 RUN npm run build:prod
 
+# pm2定義ファイルをコピーする
+COPY ecosystem.config.js ./
+
 # node.jsアプリケーションを実行する
-CMD ["pm2-runtime", "/dist/main.js"]
+CMD ["pm2-runtime", "start", "ecosystem.config.js"]
