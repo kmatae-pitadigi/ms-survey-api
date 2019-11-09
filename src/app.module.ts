@@ -17,7 +17,7 @@ import { Comment } from './entities/comment';
         Survey,
         Comment,
       ],
-      synchronize: true,
+      synchronize: false,
       logging: false,
       useUnifiedTopology: true,
       migrations: [
