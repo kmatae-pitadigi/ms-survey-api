@@ -10,7 +10,7 @@ FROM node:10.16.3-alpine
 COPY package.json package-lock.json ./
 
 # 必要なパッケージをインストールする
-RUN npm ci
+RUN npm install
 
 # PM2をインストールする
 RUN npm install pm2 -g
